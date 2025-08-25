@@ -1,0 +1,7 @@
+<div>
+  <h3>{{ movie.name }}</h3>
+  <span>Онлайн: {{ movie.isOnline }}</span>
+  <div>
+    <button (click)="moviesService.deleteMovie(movie.id)">Удалить</button>
+  </div>
+</div>

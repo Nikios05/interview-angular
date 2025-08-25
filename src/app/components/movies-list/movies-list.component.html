@@ -1,0 +1,26 @@
+<div>
+  <div>
+    <input type="text"
+           name="add new"
+           [(ngModel)]="inputNewMovie" />
+    <button (click)="onAddNewChange(inputNewMovie)">Добавить фильм</button>
+    <button (click)="moviesService.updateAllMoviesStatus()">Обновить онлайн статус</button>
+  </div>
+  <div>
+    <input
+      type="text"
+      name="search"
+      placeholder="Поиск фильма"
+      [(ngModel)]="searchText"
+      (ngModelChange)="onSearchChange($event)"
+    />
+  </div>
+  <ul>
+    <li *ngFor="let movie of moviesList$ | async; trackBy: trackById">
+      <input type="checkbox"
+             [(ngModel)]="movie.isOnline"
+             (ngModelChange)="moviesService.updateMovie(movie)"/>
+      <app-movie [movie]="movie"></app-movie>
+    </li>
+  </ul>
+</div>
