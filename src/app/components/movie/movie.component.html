@@ -1,7 +1,18 @@
-<div>
-  <h3>{{ movie.name }}</h3>
-  <span>Онлайн: {{ movie.isOnline }}</span>
-  <div>
+<app-card class="movie">
+  <input type="checkbox"
+         [(ngModel)]="movie.isOnline"
+         (ngModelChange)="moviesService.updateMovie(movie)"/>
+
+  <h3 card-header>{{ movie.name }}</h3>
+  <div card-body>
+    <label class="movie__online-control">
+      <input type="checkbox"
+             [(ngModel)]="movie.isOnline"
+             (ngModelChange)="moviesService.updateMovie(movie)"/>
+      <span>Онлайн: {{ movie.isOnline }}</span>
+    </label>
+  </div>
+  <div card-actions>
     <button (click)="moviesService.deleteMovie(movie.id)">Удалить</button>
   </div>
-</div>
+</app-card>

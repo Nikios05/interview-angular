@@ -1,0 +1,87 @@
+/* Убираем отступы и делаем box-sizing удобным */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Гарантируем 100% высоты и убираем лишние отступы */
+html, body {
+  height: 100%;
+  line-height: 1.5; /* базовый ритм текста */
+  -webkit-font-smoothing: antialiased; /* сглаживание шрифтов */
+}
+
+/* Убираем маркеры у списков */
+ul, ol {
+  list-style: none;
+}
+
+/* Убираем стандартные стили у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем дефолтные стили у кнопок и инпутов */
+button,
+input,
+textarea,
+select {
+  font: inherit;       /* наследуем шрифт */
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Кнопки делаем кликабельными */
+button {
+  cursor: pointer;
+}
+
+/* Изображения по ширине контейнера */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Убираем жирность у strong/b */
+strong {
+  font-weight: bold;
+}
+
+/* Таблицы без отступов */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Common */
+
+body {
+  padding: 32px;
+}
+
+button {
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+button:active {
+  background-color: #747474;
+}
+
+input {
+  padding: 2px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+

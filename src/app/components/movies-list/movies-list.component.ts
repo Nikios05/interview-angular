@@ -43,6 +43,10 @@ export class MoviesListComponent implements OnInit {
   }
 
   public onAddNewChange(value: string) {
+    if (!value) {
+      return;
+    }
+
     this.moviesService.addMovie(value);
     this.inputNewMovie = '';
   }

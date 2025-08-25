@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px 0 rgba(187, 183, 183, 0.36);
+}
+
+.card__footer {
+  margin-top: auto;
+}
